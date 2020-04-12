@@ -39,6 +39,8 @@ endpoint.
 ## Grafana Dashboard Definition
 The [Dashboard JSON](./grafana-dashboard.json) can be imported into Grafana and pointed to the Prometheus data source to view this information.
 
+![Image](./nats-client-dashboard.png?raw=true)
+
 ## Example Output
 
 ```
