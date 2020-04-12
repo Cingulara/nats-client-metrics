@@ -8,7 +8,9 @@ only needed this data so did the minimal listing required just for this reason. 
 so I could see which client was the busiest, had the most messages, most bytes, per client and not just the server as 
 a whole. 
 
-It is a WIP still and needs massaging to error nicely, do asynchronous work, add tests. But this is a good start IMO.
+It is a WIP still and needs to error nicely, allow certs and login/pwd authentication, as well as add tests. 
+But this is a good start IMO. Currently, it works inside a k8s namespace for non-exposed Prometheus as well as a 
+localized Docker Compose setup.
 
 ## Build
 ```
@@ -19,6 +21,9 @@ make build
 ```
 make docker
 ```
+
+Available Docker Image: https://hub.docker.com/r/cingulara/nats-client-metrics
+
 
 ## Run in Docker or Kubernetes
 There is a URL below that is in the NATSMETRICSURL environment variable to launch with this. The default is localhost which 

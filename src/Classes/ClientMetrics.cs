@@ -14,14 +14,14 @@ namespace nats_client_metrics.Classes
         private readonly HttpClient client = new HttpClient();
 
         public async Task<List<ClientVariables>> CollectMetrics(string url) {
-            List<ClientVariables> vars = new List<ClientVariables>();
+            ConnectionVariables vars = new ConnectionVariables();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Add("User-Agent", "nats-client-metrics");
             var stringTask = await client.GetStringAsync(url + "/connz");
             // parse these out
-            vars = JsonConvert.DeserializeObject<List<ClientVariables>>(stringTask);
-            return vars;
+            vars = JsonConvert.DeserializeObject<ConnectionVariables>(stringTask);
+            return vars.connections;
         }
     }
 }
