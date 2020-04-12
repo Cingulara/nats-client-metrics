@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using nats_client_metrics.Models;
@@ -35,8 +34,9 @@ namespace nats_client_metrics.Controllers
                 //SystemVariables sysVars = SystemMetrics.CollectMetrics(natsServer);
 
                 // // grab the URL above /conns and pull the client connection data
-                ConnectionVariables clientVars = ClientMetrics.CollectMetrics(natsServer);
-                foreach (ClientVariables c in clientVars.connections) {
+                ClientMetrics metrics = new ClientMetrics();
+                List<ClientVariables> clientVars = await metrics.CollectMetrics(natsServer);
+                foreach (ClientVariables c in clientVars) {
                     clientname = c.clientName.Replace("-","_");
                     exportedMetrics += "# HELP Total Messages Incoming for this client.\n";
                     exportedMetrics += "# TYPE openrmf_gnatds_in_msgs_total gauge\n";
