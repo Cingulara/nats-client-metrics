@@ -63,7 +63,7 @@ namespace nats_client_metrics.Controllers
                     
                     exportedMetrics += "# HELP Total Subscriptions for this client.\n";
                     exportedMetrics += "# TYPE openrmf_gnatds_subscriptions_total gauge\n";
-                    exportedMetrics += "openrmf_gnatds_subscriptiosn_total{server_id=\"" + natsServer + "\",";
+                    exportedMetrics += "openrmf_gnatds_subscriptions_total{server_id=\"" + natsServer + "\",";
                     exportedMetrics += "clientname=\"" + clientname + "\"} " + c.subscriptions + "\n"; 
                 }
                 return Ok(exportedMetrics);
