@@ -30,10 +30,8 @@ namespace nats_client_metrics.Controllers
                 if (Environment.GetEnvironmentVariable("NATSMETRICSURL") != null) {
                     natsServer = Environment.GetEnvironmentVariable("NATSMETRICSURL");
                 }
-                // // grab the URL above /varz and pull the system data
-                //SystemVariables sysVars = SystemMetrics.CollectMetrics(natsServer);
 
-                // // grab the URL above /conns and pull the client connection data
+                // grab the URL above /conns and pull the client connection data
                 ClientMetrics metrics = new ClientMetrics();
                 List<ClientVariables> clientVars = await metrics.CollectMetrics(natsServer);
                 foreach (ClientVariables c in clientVars) {

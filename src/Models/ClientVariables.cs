@@ -24,7 +24,10 @@ namespace nats_client_metrics.Models
         public string serverId { get; set; }
         public string rtt { get; set; }
         public decimal roundTripTime { get {
-            return Convert.ToDecimal(rtt.Replace("ms","").Replace("s",""));
+            if (!string.IsNullOrEmpty(rtt))
+                return Convert.ToDecimal(rtt.Replace("ms","").Replace("s",""));
+            else
+                return 0;
         } }
 
         public string uptime { get; set; }
