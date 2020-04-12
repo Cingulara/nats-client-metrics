@@ -36,6 +36,9 @@ endpoint.
 "ASPNETCORE_URLS": "http://*:7778"
 ```
 
+## Grafana Dashboard Definition
+The [Dashboard JSON](./grafana-dashboard.json) can be imported into Grafana and pointed to the Prometheus data source to view this information.
+
 ## Example Output
 
 ```
