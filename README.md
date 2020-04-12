@@ -43,147 +43,147 @@ The [Dashboard JSON](./grafana-dashboard.json) can be imported into Grafana and 
 
 ```
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 2
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_controls"} 2
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 1
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_audit"} 1
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 2
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_checklist"} 2
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 5
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_score"} 5
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_api_save"} 0
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 1
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_template"} 1
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 4
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_system"} 4
 # HELP Total Messages Incoming for this client.
-# TYPE openrmf_gnatds_in_msgs_total gauge
-openrmf_gnatds_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
+# TYPE gnatds_clients_in_msgs_total gauge
+gnatds_clients_in_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
 # HELP Total Messages Outgoing for this client.
-# TYPE openrmf_gnatds_out_msgs_total gauge
-openrmf_gnatds_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
+# TYPE gnatds_clients_out_msgs_total gauge
+gnatds_clients_out_msgs_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
 # HELP Total Pending Bytes for this client.
-# TYPE openrmf_gnatds_pending_bytes_total gauge
-openrmf_gnatds_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
+# TYPE gnatds_clients_pending_bytes_total gauge
+gnatds_clients_pending_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
 # HELP Total Bytes Incoming for this client.
-# TYPE openrmf_gnatds_in_bytes_total gauge
-openrmf_gnatds_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
+# TYPE gnatds_clients_in_bytes_total gauge
+gnatds_clients_in_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
 # HELP Total Bytes Outgoing for this client.
-# TYPE openrmf_gnatds_out_bytes_total gauge
-openrmf_gnatds_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
+# TYPE gnatds_clients_out_bytes_total gauge
+gnatds_clients_out_bytes_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 0
 # HELP Total Subscriptions for this client.
-# TYPE openrmf_gnatds_subscriptions_total gauge
-openrmf_gnatds_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 3
+# TYPE gnatds_clients_subscriptions_total gauge
+gnatds_clients_subscriptiosn_total{server_id="http://127.0.0.1:8222",clientname="openrmf_msg_compliance"} 3
 ```
