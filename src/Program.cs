@@ -1,6 +1,6 @@
 ﻿using System;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog.Web;
 
@@ -11,10 +11,39 @@ namespace nats_client_metrics
         public static void Main(string[] args)
         {
             var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("LOGLEVEL"))) // default
+                NLog.LogManager.Configuration.Variables["logLevel"] = "Warn";
+            else {
+                switch (Environment.GetEnvironmentVariable("LOGLEVEL"))
+                {
+                    case "5":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Critical";
+                        break;
+                    case "4":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Error";
+                        break;
+                    case "3":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Warn";
+                        break;
+                    case "2":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Info";
+                        break;
+                    case "1":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Debug";
+                        break;
+                    case "0":
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Trace";
+                        break;
+                    default:
+                        NLog.LogManager.Configuration.Variables["logLevel"] = "Warn";
+                        break;
+                }
+            }
+            NLog.LogManager.ReconfigExistingLoggers();
             try
             {
                 logger.Debug("init main");
-                BuildWebHost(args).Run(); 
+                CreateHostBuilder(args).Build().Run(); 
             }
             catch (Exception ex)
             {
@@ -29,15 +58,22 @@ namespace nats_client_metrics
             }
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .ConfigureLogging(logging =>
-                {
-                    logging.ClearProviders();
-                    logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-                })
-                .UseNLog()  // NLog: setup NLog for Dependency injection
-                .Build();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {                    
+                    webBuilder.ConfigureKestrel(serverOptions =>
+                    {
+                        // Set properties and call methods on options
+                        // make the timeout 10 minutes for longer running processes
+                        serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(10);
+                    })                        
+                    .ConfigureLogging(logging =>
+                    {
+                        logging.ClearProviders();
+                    })
+                    .UseNLog()  // NLog: setup NLog for Dependency injection
+                    .UseStartup<Startup>();
+                });
     }
 }
