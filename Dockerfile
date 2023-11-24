@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-sdk AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 RUN mkdir /app
 WORKDIR /app
 
@@ -9,13 +9,25 @@ RUN dotnet restore
 # copy the rest and build
 COPY src/ ./
 RUN dotnet build
-RUN dotnet publish -c Release -o out
+RUN dotnet publish --runtime alpine-x64 -c Release -o out --self-contained true /p:PublishTrimmed=true
 
-# build runtime image
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+# build runtime image with DoD CA Certificates
+FROM docker.io/alpine:3.18.4
+RUN apk update && apk upgrade
+
 RUN mkdir /app
 WORKDIR /app
-# RUN apt-get update && apt-get -y install ca-certificates
+COPY --from=build-env /app/out .
+# Fix for broken build on Docker in GH is to put RUN true between multiple COPY statements :(
+RUN true
 
-COPY --from=build-env /app/out ./
-ENTRYPOINT ["dotnet", "nats-client-metrics.dll"]
+# Create a group and user
+RUN addgroup --system --gid 1001 cingularagroup \
+&& adduser --system -u 1001 --ingroup cingularagroup --shell /bin/sh cingularauser
+RUN chown -R cingularauser:cingularagroup /app
+
+USER 1001
+ENTRYPOINT ["./nats-client-metrics"]
+
+LABEL org.opencontainers.image.source https://github.com/Cingulara/nats-client-metrics
+LABEL maintainer="dale.bingham@cingulara.com"
