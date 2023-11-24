@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/nats-client-metrics.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/nats-client-metrics.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -33,6 +33,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development",
                 "ASPNETCORE_URLS": "http://*:7778",
                 "NATSMETRICSURL" : "http://127.0.0.1:8222",
+                "LOGLEVEL" : "3"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

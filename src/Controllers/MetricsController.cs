@@ -29,7 +29,7 @@ namespace nats_client_metrics.Controllers
 
                 if (Environment.GetEnvironmentVariable("NATSMETRICSURL") != null) {
                     natsServer = Environment.GetEnvironmentVariable("NATSMETRICSURL");
-                }
+                } 
 
                 // grab the URL above /conns and pull the client connection data
                 ClientMetrics metrics = new ClientMetrics();
