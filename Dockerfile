@@ -12,7 +12,7 @@ RUN dotnet build
 RUN dotnet publish --runtime alpine-x64 -c Release -o out --self-contained true /p:PublishTrimmed=true
 
 # build runtime image with DoD CA Certificates
-FROM ghcr.io/soteriasoftwarellc/openrmfpro-base:2.10.0
+FROM ghcr.io/soteriasoftwarellc/openrmfpro-base:2.10.1
 RUN apk update && apk upgrade
 
 RUN mkdir /app
