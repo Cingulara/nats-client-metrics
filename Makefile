@@ -1,4 +1,4 @@
-VERSION ?= 2.0.2
+VERSION ?= 2.0.3
 NAME ?= "nats-client-metrics"
 AUTHOR ?= "Dale Bingham"
 PORT_EXT ?= 7778
