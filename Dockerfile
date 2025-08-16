@@ -9,7 +9,7 @@ RUN dotnet restore
 # copy the rest and build
 COPY src/ ./
 RUN dotnet build
-RUN dotnet publish --runtime alpine-x64 -c Release -o out --self-contained true /p:PublishTrimmed=true
+RUN dotnet publish --runtime linux-musl-x64 -c Release -o out --self-contained true
 
 # build runtime image with DoD CA Certificates
 FROM cingulara/openrmf-base:1.14.00
