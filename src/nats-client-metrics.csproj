@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ProjectGuid>{abfa3553-d4c3-4bba-b34e-0a5ce1cde607}</ProjectGuid>
     <RootNamespace>nats_client_metrics</RootNamespace>
     <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
-    <Version>2.0.3</Version>
+    <Version>2.1.0</Version>
     <InformationalVersion>This is a NATS Metrics collector to store metrics for individual client connections. Given to you by Cingulara.</InformationalVersion>
   </PropertyGroup>
 
