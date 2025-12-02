@@ -12,7 +12,7 @@ RUN dotnet build
 RUN dotnet publish --runtime linux-musl-x64 -c Release -o out --self-contained true
 
 # build runtime image with DoD CA Certificates
-FROM cingulara/openrmf-base:1.14.00
+FROM docker.io/cingulara/openrmf-base:1.14.01
 RUN apk update && apk upgrade
 
 RUN mkdir /app
